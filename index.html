@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- META TAGS: SEO & BROWSER COMPATIBILITY -->
+    <!-- Purpose: Improve SEO ranking and ensure proper rendering -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the finest collection of luxury, fashion, and designer watches for men and women. Discover top brands, Swiss-made, automatic, quartz, and smartwatches at affordable prices. Browse our online store for unique, premium timepieces, from sports and chronograph models to vintage and minimalist designs. Find the perfect watch or watch accessory today — perfect for gifts, special occasions, or daily wear.">
+    <meta name="keywords" content="timesmith, watches, watch store, online watch shop, quality watches, watch sales, mens watches, womens watches, unisex watches, quartz watches, smart watches, sport watches, minimalist watches, buy premium watches online">
+    
+    <!-- Website icon for Brand identification in browser tabs -->
+    <!-- Dependencies: Image file at Images/WM Logo.png -->
+    <link rel="icon" type="icon" href="Images/WM Logo.png">
+    <title>WatchMe | Home</title>
+
+    <!-- External CSS and Java Script-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js"></script>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            
+        }
+
+
+        .hero-content h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+            color: #fdfafa;
+        }
+
+        .hero-content p {
+            font-size: 19px;
+            margin-bottom: 24px;
+            color: #fdf9f9;
+        }
+
+        /* CSS Properties of button. */
+        .hero-content .btn {
+            padding: 13px 32px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Makes Shop Now Button Grey on hover. */
+        .hero-content .btn:hover {
+            background: #333;
+        }
+
+        .paragraph{
+            padding-left: 7%;
+            padding-right: 7%;
+            line-height: 1.5;
+        }
+
+        .overviweImages img{
+            width: 10%;
+        }
+
+        
+        /* Image Collection Slider */
+
+        .slider-wrapper{
+            width: 100%;
+            position: relative;
+            max-width: fit-content;
+            margin: 0 auto;
+        }
+
+        .slider{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slider img{
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+        /* CSS for overview_section */
+
+        .overview_section{
+            width: 100%;
+            height: 40%;
+        }
+
+        .overview_section_content{
+            padding: 3% 3% 1% 20%;
+        }
+
+        /* CSS for formatting Article */
+
+        .profile-card {
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            display: flex;
+            border: 2px solid #B2B1B0;
+            border-radius: 10px;
+            width: 77%;
+            overflow: hidden;
+        }
+
+        .profile-card img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            width: 60%;
+        }
+
+        .profile-content p {
+            line-height: 1.5;
+            margin: 0px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .profile-content h3{
+            font-size: 25px;
+        }
+
+        /* Interactive button CSS */
+        .button {
+            align-self: flex-start;
+            padding: 10px 20px 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #171717;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover{
+            background-color: black;
+            box-shadow: 3px 3px 7px gray;
+            transition: 0.3s ease;
+        }
+
+
+        /* Overview of About Page. */
+
+        .paragraph{
+            font-size: 20px;
+            padding-left: 7%;
+            padding-right: 7%;
+            line-height: 1.5;
+        }
+
+
+        /* Overview of Research Page. */
+
+        .logos_images img{
+            width: 500px;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+        <!-- Structure: 
+            - Brand logo with other pages link
+            - Clock display (dependency: JS/script.js)
+        -->
+        <header>
+            <nav class="navbar">
+                <div>
+                    <a class="logo" href="index.html"><h1>WatchMe</h1></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="HTML/blog.html">Blog</a></li>
+                    <li><a href="HTML/products.html">Products</a></li>
+                    <li><a href="HTML/research.html">Research</a></li>
+                    <li><a href="HTML/about us.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Clock display -->
+            <div id="clock"></div>
+        </header>
+
+
+
+    <!-- Store Introduction Image -->
+    <section class="hero">
+        <div class="hero-content">
+          <video autoplay muted loop>
+            <source src="video/Rolex Watch.mp4" type="video/mp4">
+          </video>
+          <h2>Crafted with Excellence</h2>
+          <p>Time flies. Our watches will make you fly too.</p>
+          <a href="HTML/Products.html" style="text-decoration: none;" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <!-- Collection Heading -->
+
+    <h2>Our Collection</h2>
+
+    <!-- PRODUCT COLLECTION CAROUSEL -->
+    <!-- Structure:
+         - Horizontal scroll container
+         - 11 product images (placeholder links)
+         - Dependency: All images in Images/Home Page/
+    -->
+    <section style="padding: 32px;" class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <a id="1" href="HTML/products.html"><img class="visible" src="Images/Home Page/Cosmograph Daytona R.png" alt="Cosmograph Daytona R.png"></a>
+                <a id="2" href="HTML/products.html"><img class="visible" src="Images/Home Page/Explorer II L.png" alt="Explorer II L.png"></a>
+                <a id="3" href="HTML/products.html"><img class="visible" src="Images/Home Page/Submariner R.png" alt="Submariner R.png"></a>
+                <a id="4" href="HTML/products.html"><img class="visible" src="Images/Home Page/GMT-Master II L.png" alt="GMT-Master II L.png"></a>
+                <a id="5" href="HTML/products.html"><img class="visible" src="Images/Home Page/Yacht-Master R.png" alt="Yacht-Master R.png"></a>
+                <a id="6" href="HTML/products.html"><img class="visible" src="Images/Home Page/DW-500ORIA L.png" alt="DW-500ORIA L.png"></a>
+                <a id="7" href="HTML/products.html"><img class="visible" src="Images/Home Page/GA-11ORL-1A R.png" alt="GA-11ORL-1A R.png"></a>
+                <a id="8" href="HTML/products.html"><img class="visible" src="Images/Home Page/SeamasterDiver L.png" alt="SeamasterDiver L.png"></a>
+                <a id="9" href="HTML/products.html"><img class="visible" src="Images/Home Page/De Ville Prestige R.png" alt="De Ville Prestige R.png"></a>
+                <a id="10" href="HTML/products.html"><img class="visible" src="Images/Home Page/Globemaster L.png" alt="Globemaster L.png"></a>
+                <a id="11" href="HTML/products.html"><img class="visible" src="Images/Home Page/Constellation R.png" alt="Constellation R.png"></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Overview of Blog Pages -->
+            
+    <h2>Our Blogs</h2>
+
+    <div class="overview_section">
+        <div class="overview_section_content">
+            <br>
+            <!-- Article 01: Technology Impact -->
+
+            <div class="profile-card">
+                <img src="Images/Blog Page/Article 01.png" alt="Article 01">
+                <div class="profile-content">
+                    <h3 style="font-size: 16px;">The impact of technology on the watch industry and consumer trends.</h3>
+                    <p>The impact of technology on the watch industry has been transformative, with innovations like smartwatches revolutionizing consumer preferences. These devices blend traditional timekeeping with advanced features such as fitness tracking, notifications, and health monitoring, attracting tech-savvy consumers. </p>
+                    <a href="HTML/Article 01.html" class="button">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    
+    <div style="margin: auto;">
+        <a href="HTML/blog.html" class="button">Explore More Blogs</a>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- <hr> -->
+
+    <br>
+
+    <!-- Research Page Overview -->
+
+    <h2>Research & Reference</h2>
+    <br>
+    <br>
+    <p class="paragraph">
+        Dive into the foundation of our work with the Research & Reference section, your gateway to the data, 
+        studies, and sources that inform our projects. Here, we prioritize transparency and credibility, ensuring every claim, 
+        design choice, or solution is rooted in verified information. Here are some websites from where we have taken references. 
+        Click on their logos to view their websites.
+    </p>
+
+    <br>
+    <br>
+
+    <div style="margin: auto;" class="logos_images">
+        <img style="padding-right: 50px;" src="Images/Home Page/Rolex logo.jpg" alt="Rolex logo.png">
+        <img src="Images/Home Page/Tomtoc logo.jpg" alt="Tomtoc logo.png">
+    </div>
+
+    <br>
+    <br>
+
+    <div style="margin: auto;">
+        <a href="HTML/research.html" class="button">View More Details</a>
+    </div>
+
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+
+    <!-- About us Page Overview -->
+
+    <h2>About us</h2>
+    <br>
+    <br>
+    <p class="paragraph">We are a team of five skilled developers dedicated to crafting the WatchMe website, 
+        blending creativity and technical expertise. Through seamless coordination and unwavering determination, we’ve 
+        transformed WatchMe into a visually stunning and user-friendly platform. Every line of code and design choice reflects 
+        our shared passion for excellence. Reach out via our contact form—we’d love to collaborate or hear your feedback!
+    </p>
+
+    <br>
+
+    <div style="margin: auto;">
+        <a href="HTML/about us.html" class="button">Know More</a>
+    </div>
+
+    <br>
+    <br>
+    
+    <!-- Footer -->
+    <!-- Structure: Simple copyright notice -->
+
+    <footer>
+        <span>
+            <br>
+            Copyright &copy; 2025 WatchMe Co. All Rights Reserved
+            <br>
+            <br>
+        </span>
+    </footer>
+</body>
+</html>
