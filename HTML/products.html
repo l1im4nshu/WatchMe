@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- META TAGS: SEO & BROWSER COMPATIBILITY -->
+    <!-- Purpose: Improve SEO ranking and ensure proper rendering -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the finest collection of luxury, fashion, and designer watches for men and women. Discover top brands, Swiss-made, automatic, quartz, and smartwatches at affordable prices. Browse our online store for unique, premium timepieces, from sports and chronograph models to vintage and minimalist designs. Find the perfect watch or watch accessory today — perfect for gifts, special occasions, or daily wear.">
+    <meta name="keywords" content="timesmith, watches, watch store, online watch shop, quality watches, watch sales, mens watches, womens watches, unisex watches, quartz watches, smart watches, sport watches, minimalist watches, buy premium watches online">
+    
+    <!-- Website icon for Brand identification in browser tabs -->
+    <!-- Dependencies: Image file at Images/WM Logo.png -->
+    <link rel="icon" type="icon" href="../Images/WM Logo.png">
+    <title>WatchMe | Products</title>
+
+    <!-- External CSS and Java Script file -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js"></script>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0; /* Reset margin */
+            padding: 0; /* Reset padding */
+            box-sizing: border-box; /* Consistent box model */
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Global font */
+            line-height: 1.6; /* Improve readability */
+            color: rgb(50,50,50); /* Default text color */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit parent text color */
+        }
+
+        /* Product Details Section */
+        .product-details {
+            display: flex; 
+            flex-wrap: wrap; /* Wrap items if needed */
+            margin: 32px; 
+            gap: 32px; 
+            margin-left: 90px; 
+        }
+
+        .img1:hover> :not(:hover) {
+            opacity: 0.3; /* Dim non-hovered images */
+        }
+
+        .img1:hover {
+            transform: scale(1.1); /* Scale hovered image */
+        }
+
+        .product-image {
+            flex: 1; 
+            max-width: 150px; 
+            max-height: 150px; 
+        }
+
+        .product-image img {
+            width: 100%; /* Fit container */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .product-image {
+            transition: transform 1s ease; /* Smooth animation */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        .product-info {
+            flex: 1; 
+        }
+
+        .product-info h2 {
+            font-size: 32px; /* Title font size */
+            margin-bottom: 16px; 
+            text-align: left;
+        }
+
+        .product-info p {
+            font-size: 16px; 
+            margin-bottom: 24px; 
+        }
+
+        .price {
+            font-size: 24px; 
+            color: black; 
+            margin-bottom: 16px;   
+        }
+
+        .add-to-cart {
+            padding: 12.8px 32px; 
+            background: #000; 
+            color: #fff; 
+            font-size: 16px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        }
+
+        .add-to-cart:hover {
+            color: rgb(171, 171, 171); 
+        }
+
+        /* Collapsible Content */
+        .collapsible-container {
+            margin: 10px; 
+        }
+
+        .collapsible-button {
+            background-color: white; 
+            color: rgb(50,50,50); 
+            border: none; 
+            padding: 10px 15px; 
+            cursor: pointer; 
+            font-size: 13px; 
+            font-weight: bold; 
+            text-align: left; 
+            width: 118px; 
+            outline: none;  
+        }
+
+        .collapsible-button[aria-expanded="true"]::after {
+            content: "▲"; /* Arrow for expanded state */
+            margin-left: auto; 
+        }
+
+        .collapsible-button[aria-expanded="false"]::after {
+            content: "▼"; /* Arrow for collapsed state */
+            margin-left: auto; 
+        }
+
+        .collapsible-content {
+            padding: 10px; 
+            margin-top: 5px; 
+            display: none; /* Hidden by default */
+        }
+
+        .collapsible-content p {
+            margin: 0; 
+        }
+
+        .collapsible-button:hover {
+            color: rgb(50,50,50);
+        }
+
+        /* Top Bar */
+            .top-bar {
+            background: #000; 
+            color: #fff; 
+            text-align: center; 
+            padding: 8px 0; 
+            font-size: 14.4px; 
+        }
+
+        /* Search Bar */
+            .search-bar {
+            display: flex; 
+            align-items: left; 
+            gap: 10px; 
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px; 
+            font-size: 1rem; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+            width: 200px; 
+        }
+
+        .search-bar button {
+            padding: 8px 16px; 
+            font-size: 16px; 
+            border: none; 
+            background-color: #000; 
+            color: #fff; 
+            cursor: pointer; 
+            border-radius: 4px; 
+        }
+
+        .search-bar button:hover {
+            background-color: #333; 
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <!-- Structure: 
+      - Brand logo with other pages link
+      - Clock display (dependency: JS/script.js)
+    -->
+    <header>
+      <nav class="navbar">
+        <div>
+          <a class="logo" href="../index.html"><h1>WatchMe</h1></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="about us.html">About Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Clock display -->
+      <div id="clock"></div>
+    </header>
+
+
+    <!-- Product Details Section -->
+
+    <section class="product-details">
+        
+      <!-- Cosmograph Daytona -->
+            <div class="product-image">
+                <img class="img1" src="../Images/Product Page/img1.webp">
+            </div>
+            
+            <div class="product-info">
+                <h2>Cosmograph Daytona</h2>
+                <del class="del-price">Rs 1,14,00,350</del>
+                <p class="price">Rs 9,205,070</p>
+
+
+                <p style="font-family: 'Times New Roman', Times, serif;"> 40mm, Oyster, Everose gold</p>
+
+
+                <div class="collapsible-container">
+                    <button class="collapsible-button" aria-expanded="false">
+                      Description
+                    </button>
+                    <div class="collapsible-content" hidden>
+                      <p class="img-description">
+                        The 18 ct gold versions of the Cosmograph Daytona with a Cerachrom bezel are available with an Oysterflex bracelet. Developed by Rolex and patented, it singularly combines the robustness of a metal bracelet with the comfort of an elastomer bracelet.
+                    </p>
+                    <div class="review-container">
+                      <br>
+                      <h4>Leave a Review</h4>
+                      <div class="stars">
+                          <span class="star" data-value="1">&#9733;</span>
+                          <span class="star" data-value="2">&#9733;</span>
+                          <span class="star" data-value="3">&#9733;</span>
+                          <span class="star" data-value="4">&#9733;</span>
+                          <span class="star" data-value="5">&#9733;</span>
+                      </div>
+                      <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                      <button id="submitReview">Submit</button>
+                    </div>
+                    </div>
+                  </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+              
+            <!-- De VillePrestige -->
+            <div class="product-image">
+                <img class="img1" src="../Images/Product Page/img2.webp" >
+            </div>
+            
+            <div class="product-info">
+                <h2>De VillePrestige</h2><br><br><br>
+                <p class="price">Rs 12,60,000</p>
+
+                <p style="font-family: 'Times New Roman', Times, serif;"> 41 mm, steel - yellow gold on leather strap</p>
+                <div class="collapsible-container">
+                    <button class="collapsible-button" aria-expanded="false">
+                      Description
+                    </button>
+                    <div class="collapsible-content" hidden>
+                      <p class="img-description">
+                        This 41 mm model, in stainless steel and 18K Yellow gold, features a black polished ceramic bezel ring with Roman numerals filled with OMEGA Ceragold™. It has a sun-brushed green dial with gradient effect and a date window at the 6 o'clock position. The hands, OMEGA logo, Constellation star and indexes are also in 18K Yellow gold.
+                      </p>
+                      <div class="review-container">
+                        <br>
+                        <h4>Leave a Review</h4>
+                        <div class="stars">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                        <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                        <button id="submitReview">Submit</button>
+                      </div>
+                    
+                    </div>
+                  </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-image">
+                <img class="img1" src="../Images/Product Page/img3.webp" >
+            </div>
+            
+            <!-- Constillation -->
+            <div class="product-info">
+                <h2>Constillation</h2><br><br>
+                <del class="del-price">Rs 18,00,999</del>
+                <p class="price">Rs 15,15,611</p>
+
+                <p style="font-family: 'Times New Roman', Times, serif;"> 41 mm, steel on leather strap</p>
+                <div class="collapsible-container">
+                    <button class="collapsible-button" aria-expanded="false">
+                      Description
+                    </button>
+                    <div class="collapsible-content" hidden>
+                      <p class="img-description">
+                        The dramatic and enduring design of the OMEGA Constellation is characterised by its famous half-moons, as well as the “claws” on the side of the case. This 41 mm stainless steel model features a polished black ceramic bezel with Roman numerals in Liquidmetal™, a silk-embossed rhodium-grey dial and a date window at the 6 o'clock position. The hands, OMEGA logo, Constellation star and facetted indexes are all blackened.
+                      </p>
+                      <div class="review-container">
+                        <br>
+                        <h4>Leave a Review</h4>
+                        <div class="stars">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                        <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                        <button id="submitReview">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+        </section><br>
+
+        <!-- Casio - DW-5000R-1A -->
+    <section class="product-details">
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img4.webp" >
+        </div>
+        
+        <div class="product-info">
+            <h2>Casio - DW-5000R-1A</h2>
+            <del class="del-price" >Rs 27,600</del>
+            <p class="price">Rs 20,000</p>
+            
+            <p style="font-family: 'Times New Roman', Times, serif;"> 42.3 mm, stainless steel case</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    In true G-SHOCK style, the DW-5000R stays true to G-SHOCK origins and yet forges ahead with innovation at the same time. Inheriting the design concepts of the first-ever G-SHOCK, this updated take on the original incorporates current state-of-the-art Casio technologies to deliver today’s advanced functionality in a supremely faithful re-creation of the original iconic design.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Explorer II -->
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img5.webp" >
+        </div>
+        
+        <div class="product-info">
+            <h2>Explorer II</h2><br><br><br>
+            
+            <p class="price">Rs 23,57,688</p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;"> Oyster, 42 mm, Oystersteel</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    The Explorer II is equipped with an additional 24-hour display; a dedicated hand circles the dial in 24 hours rather than the usual 12, pointing to a fixed bezel with 24 hour graduations.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- GA-110RL-1A -->
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img6.webp">
+        </div>
+        
+        <div class="product-info">
+            <h2>GA-110RL-1A</h2><br><br><br>
+            
+            <p class="price">Rs 26,000</p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;"> 55 mm, Resin based case</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    A stand-out with distinctive large case. The original color scheme is faithfully reproduced with touches of G-SHOCK red, representing the passion to take on challenges; blue, symbolizing excellent water resistance; and yellow, signifying outstanding shock resistance.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section><br>
+
+    <!-- Seamaster Diver 300M -->
+    <section class="product-details">
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img7.webp" >
+        </div>
+        
+        <div class="product-info">
+            <h2>Seamaster Diver 300M</h2><br>
+            
+            <p class="price">Rs 8,30,500</p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;"> 42 mm, steel on steel</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    Since 1993, the Seamaster Diver 300M has enjoyed a legendary following. Today’s modern collection has embraced that famous ocean heritage and updated it with OMEGA’s most advanced innovation and design.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Yacht-Master 42 -->
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img8.webp" >
+        </div>
+        
+        <div class="product-info">
+            <h2>Yacht-Master 42</h2><br><br>
+            <del class="del-price">Rs 44,29,843</del>
+            <p class="price">Rs 40,40,843</p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;"> Oyster, 42 mm, RLX titanium</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    The Yacht-Master 42, made from RLX titanium, is fitted on an Oyster bracelet. Developed at the end of the 1930s, this three-piece link bracelet remains the most universal in the Oyster Perpetual collection and is known for its robustness.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-image">
+            <img class="img1" src="../Images/Product Page/img9.webp" >
+        </div>
+        
+        <!-- GMT-Master II -->
+        <div class="product-info">
+            <h2>GMT-Master II</h2><br><br><br>
+            
+            <p class="price">Rs 43,42,436</p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;"> Oyster, 40 mm, Oystersteel and yellow gold</p>
+            <div class="collapsible-container">
+                <button class="collapsible-button" aria-expanded="false">
+                  Description
+                </button>
+                <div class="collapsible-content" hidden>
+                  <p class="img-description">
+                    This model features a black dial and a two-colour Cerachrom bezel insert in grey and black ceramic. In addition to conventional hour, minute and seconds hands, the GMT-Master II features an arrow-tipped hand, which circles the dial once every 24 hours, as well as a bidirectional rotatable 24-hour graduated bezel.
+                  </p>
+                  <div class="review-container">
+                    <br>
+                    <h4>Leave a Review</h4>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                    <button id="submitReview">Submit</button>
+                  </div>
+                </div>
+              </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section><br><br>
+    <section class="product-details">
+        
+      <!-- Submariner Date -->
+      <div class="product-image">
+          <img class="img1" src="../Images/Product Page/img10.webp">
+      </div>
+      
+      <div class="product-info">
+          <h2>Submariner Date</h2>
+          <del class="del-price" >Rs 36,12,600</del>
+          <p class="price">Rs 41,18,352</p><br><br>
+
+          <p style="font-family: 'Times New Roman', Times, serif;"> Oyster, 41 mm, Oystersteel and yellow gold</p>
+          <div class="collapsible-container">
+              <button class="collapsible-button" aria-expanded="false">
+                Description
+              </button>
+              <div class="collapsible-content" hidden>
+                <p class="img-description">
+                  The Submariner's rotatable bezel is a key functionality of the watch. Its 60-minute graduations allow a diver to accurately and safely monitor diving time and decompression stops.
+                </p>
+                <div class="review-container">
+                  <br>
+                  <h4>Leave a Review</h4>
+                  <div class="stars">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                  <button id="submitReview">Submit</button>
+                </div>
+              </div>
+            </div>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+      
+      <!-- Vostok Automatic -->
+      <div class="product-image">
+          <img class="img1" src="../Images/Product Page/img11.png" >
+      </div>
+      
+      <div class="product-info">
+          <h2>Vostok Automatic</h2><br><br><br>
+          
+          <p class="price">Rs 20,900</p>
+
+          <p style="font-family: 'Times New Roman', Times, serif;"> 46 mm, Stainless Steel, Screw Down</p>
+          <div class="collapsible-container">
+              <button class="collapsible-button" aria-expanded="false">
+                Description
+              </button>
+              <div class="collapsible-content" hidden>
+                <p class="img-description">
+                  Movement: Seiko Automatic NH35, Case: Stainless Steel, Glass: Hardened K1 Mineral Glass, Crown: Screw Down, Strap: Black Genuine Leather with Red Stitching, Functions: Hour, Minutes, Seconds and Date, Water Resistance: 200 Metres, Warranty: 2 Years
+                </p>
+                <div class="review-container">
+                  <br>
+                  <h4>Leave a Review</h4>
+                  <div class="stars">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                  <button id="submitReview">Submit</button>
+                </div>
+              </div>
+            </div>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- NATO Leather -->
+      <div class="product-image">
+          <img class="img1" src="../Images/Product Page/img12.png" >
+      </div>
+      
+      <div class="product-info">
+          <h2>NATO Leather</h2><br><br>
+          <del class="del-price">Rs 19,000</del>
+          <p class="price">Rs 16,000</p>
+
+          <p style="font-family: 'Times New Roman', Times, serif;"> Glass Sapphire Crystal Single Dome Glass</p>
+          <div class="collapsible-container">
+              <button class="collapsible-button" aria-expanded="false">
+                Description
+              </button>
+              <div class="collapsible-content" hidden>
+                <p class="img-description">
+                  Indicators & Hands Luminous
+                  Case Material Stainless Steel, Strap Material Pure Leather, Movement Japan Quartz, Glass Sapphire Crystal Single Dome Glass, Water Resistance 100m (10 ATM), Case Diameter 41.5mm, Case Thickness 10mm, Dial Type Analogue, Outer Bezel Type Rotating.
+                </p>
+                <div class="review-container">
+                  <br>
+                  <h4>Leave a Review</h4>
+                  <div class="stars">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <textarea id="reviewText" placeholder="Write your review..."></textarea>
+                  <button id="submitReview">Submit</button>
+                </div>
+              </div>
+            </div>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+  </section><br>
+
+    <!-- Footer -->
+    <!-- Structure: Simple copyright notice -->
+
+    <footer>
+        <span>
+            <br>
+            Copyright &copy; 2025 WatchMe Co. All Rights Reserved
+            <br>
+            <br>
+        </span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- META TAGS: SEO & BROWSER COMPATIBILITY -->
+    <!-- Purpose: Improve SEO ranking and ensure proper rendering -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the finest collection of luxury, fashion, and designer watches for men and women. Discover top brands, Swiss-made, automatic, quartz, and smartwatches at affordable prices. Browse our online store for unique, premium timepieces, from sports and chronograph models to vintage and minimalist designs. Find the perfect watch or watch accessory today — perfect for gifts, special occasions, or daily wear.">
+    <meta name="keywords" content="timesmith, watches, watch store, online watch shop, quality watches, watch sales, mens watches, womens watches, unisex watches, quartz watches, smart watches, sport watches, minimalist watches, buy premium watches online">
+    
+    <!-- Website icon for Brand identification in browser tabs -->
+    <!-- Dependencies: Image file at Images/WM Logo.png -->
+    <link rel="icon" type="icon" href="../Images/WM Logo.png">
+    <title>WatchMe | Blog</title>
+
+    <!-- External CSS and Java Script file -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js"></script>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Blog header section */
+        .blog-header {
+            text-align: center;
+            padding: 32px 16px;
+            background: #f4f4f4;
+        }
+
+        .blog-header h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .blog-header p {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .profile-content h3{
+            font-size: 25px;
+        }
+
+
+        /* Article card component */
+        /* Purpose: Consistent presentation of blog posts */
+        /* Structure:
+           - Image (40% width)
+           - Content area (60% width)
+           - Flexible spacing between elements
+        */
+        .profile-card {
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            display: flex;
+            border: 2px solid #B2B1B0;
+            border-radius: 10px;
+            width: 77%;
+            overflow: hidden;
+        }
+
+        .profile-card img {
+            border-radius: 7px;
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            width: 60%;
+        }
+
+        .profile-name{
+            color: black;
+            margin: 0;
+            font-size: 24;
+            font-weight: bold;
+        }
+
+        .profile-content p {
+            line-height: 1.5;
+            margin: 0px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+
+        /* Interactive button CSS */
+        .button {
+            align-self: flex-start;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #171717;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover{
+            background-color: black;
+            box-shadow: 3px 3px 7px gray;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <!-- Structure: 
+        - Brand logo with other pages link
+        - Clock display (dependency: JS/script.js)
+    -->
+    <header>
+        <nav class="navbar">
+          <div>
+            <a class="logo" href="../index.html"><h1>WatchMe</h1></a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="about us.html">About Us</a></li>
+          </ul>
+        </nav>
+  
+        <!-- Clock display -->
+        <div id="clock"></div>
+    </header>
+
+
+    <!-- Content of Blog Page -->
+
+    <section class="blog-header">
+        <h2>Welcome to the WatchMe Blog</h2>
+        <p>Your ultimate source for tips, trends, and stories about watches.</p>
+    </section>
+
+    <section style="padding-left: 25%; padding-right: 10%; padding-bottom: 10%;">
+
+
+        <br>
+        <br>
+        <!-- Article 01: Technology impact -->
+
+        <div class="profile-card">
+            <img src="../Images/Blog Page/Article 01.png" alt="Article 01.png">
+            <div class="profile-content">
+                <h3 style="font-size: 16px;">The impact of technology on the watch industry and consumer trends.</h3>
+                <p>The impact of technology on the watch industry has been transformative, with innovations like smartwatches revolutionizing consumer preferences. These devices blend traditional timekeeping with advanced features such as fitness tracking, notifications, and health monitoring, attracting tech-savvy consumers. </p>
+                <a href="Article 01.html" class="button">Read More</a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- Article 02: Maintainance guidde -->
+
+        <div class="profile-card">
+            <img src="../Images/Blog Page/Article 02.png" alt="Article 02.png">
+            <div class="profile-content">
+                <h3 style="font-size: 16px;">How to Maintain Your Watch?</h3>
+                <p>Maintaining your watch requires regular care to ensure its longevity and accuracy. For mechanical watches, keep them wound and store them in a dry, cool place to prevent rust and damage. Clean the case and strap with a soft cloth, avoiding harsh chemicals. For water-resistant models, check seals periodically to ensure they remain intact. If your watch has a battery, replace it promptly to avoid leakage. Regular servicing by a professional every few years helps maintain movement precision and overall functionality, ensuring your watch stays in top condition.</p>
+                <a href="Article 02.html" class="button">Read More</a>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- Article 03: Design innovations -->
+
+        <div class="profile-card">
+            <img src="../Images/Blog Page/Article 03.png" alt="Article 03.png">
+            <div class="profile-content">
+                <h3 style="font-size: 16px;">Technological advancements with watch design and sales.</h3>
+                <p>Technological advancements in watch design have significantly reshaped both functionality and aesthetics. Smartwatches now incorporate health tracking, GPS, and connectivity features, appealing to tech-oriented consumers. Meanwhile, traditional watchmakers integrate digital elements like hybrid displays or advanced materials, blending innovation with craftsmanship. In terms of sales, e-commerce platforms and digital marketing have expanded reach, allowing brands to tap into global markets. Additionally, augmented reality and virtual try-ons are transforming the customer experience, making it easier for consumers to explore and purchase watches online.</p>
+                <a href="Article 03.html" class="button">Read More</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <!-- Structure: Simple copyright notice -->
+
+    <footer>
+        <span>
+            <br>
+            Copyright &copy; 2025 WatchMe Co. All Rights Reserved
+            <br>
+            <br>
+        </span>
+    </footer>
+</body>
+</html>
